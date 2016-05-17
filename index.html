@@ -1,18 +1,26 @@
-
-<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-
 <html>
 <head>
-<body>
-</body>    
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>  
+<script type="text/javascript">
+    
+    function addPtag()
+    console.log('onclick');
+    
+    $.ajax({
+    url:"/ajax.html",
+    success:function( result ){
+    $("#ajax-contents").append( result );
+    }
+    });
+    
+</script>    
 </head>
+<body>
     
 <h1>holle world!</h1>
 <div id="ajax-contents"></div>
 <botton type="button" onClick="addPtag()">add ptag</botton>
 
-    
-    
 </body>
 </html>
 
